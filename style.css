@@ -1,0 +1,141 @@
+/* Geral */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: linear-gradient(to bottom, #000428, #004e92);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+    max-width: 90%; /* Adapta a largura para telas menores */
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin: 0;
+  }
+  
+  .subtext {
+    margin: 10px 0;
+    font-size: 1.2em;
+    opacity: 0.8;
+  }
+  
+  button {
+    background: #ff477e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    background: #ff6f94;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .surprise {
+    margin-top: 20px;
+    font-size: 1.5em;
+  }
+  
+  .hearts {
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+  }
+  
+  .hearts::before,
+  .hearts::after {
+    content: '❤️ ❤️ ❤️';
+    font-size: 2em;
+    position: absolute;
+    animation: float 4s linear infinite;
+  }
+  
+  .hearts::after {
+    top: -50px;
+    animation-delay: 2s;
+  }
+  
+  @keyframes float {
+    0% {
+      top: 100%;
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      top: -50%;
+      opacity: 0;
+    }
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2em;
+    }
+  
+    .subtext {
+      font-size: 1em;
+    }
+  
+    button {
+      padding: 8px 16px;
+      font-size: 0.9em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8em;
+    }
+  
+    .subtext {
+      font-size: 0.9em;
+    }
+  
+    button {
+      padding: 6px 12px;
+      font-size: 0.8em;
+    }
+  }
+  /* Botão no topo */
+.top-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: #ff477e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s;
+    background: 0.3s;
+  }
+  
+  .top-button:hover {
+    transform: scale(1.1);
+    background: #ff6f94;
+  }
+  
